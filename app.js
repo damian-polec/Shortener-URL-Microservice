@@ -19,7 +19,7 @@ app.use((req, res, next) => {
 app.use(routes);
 
 mongoose
-  .connect(`mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@url-shortener-8fnbq.mongodb.net/url?retryWrites=true`, {useNewUrlParser: true})
+  .connect(`mongodb+srv://${process.env.USER}:${process.env.PASS}@url-shortener-8fnbq.mongodb.net/url?retryWrites=true`, {useNewUrlParser: true})
   .then(res => {
     console.log('server running..');
     app.listen(process.env.PORT || 3000);
